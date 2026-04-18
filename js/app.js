@@ -18,13 +18,11 @@ function adicionar(){
     nome.value = "";
 }
 function sortear() {
-     if(amigos.length < 4){
+    if(amigos.length < 4){
         alert('digite pelo menos 4 amigos');
         return;
     }
-   
-
-  embaralhar(amigos);
+   embaralhar(amigos);
   let sorteio = document.getElementById('lista-sorteio');
 for (let i = 0; i < amigos.length; i++) {
     if (i == amigos.length - 1) {
