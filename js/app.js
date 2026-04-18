@@ -3,12 +3,12 @@ let amigos = [];
 function adicionar(){
    
     let nome = document.getElementById('nome-amigo');
-    if(amigos.value == ''){
+    if(nome.value == ''){
         alert('digite o nome do amigo');
         return;
    
     }
-     if(amigos.includes(amigos.value)){
+     if(amigos.includes(nome.value)){
         alert('nome já adicionado!');
         return;
      }
