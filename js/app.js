@@ -3,15 +3,25 @@ let amigos = [];
 function adicionar(){
    
     let nome = document.getElementById('nome-amigo');
+    let repetido = nome.value.trim();
     if(nome.value == ''){
         alert('digite o nome do amigo');
         return;
    
     }
-     if(amigos.includes(nome.value)){
+    let nomeNormalizado = repetido.toUpperCase();
+
+    let existe = amigos.some(a => a.toUpperCase() === nomeNormalizado);
+
+     if (existe) {
         alert('nome já adicionado!');
         return;
-     }
+    }
+
+    // adiciona apenas uma vez
+    amigos.push(repetido);
+
+
     let lista = document.getElementById('lista-amigos');
     amigos.push(nome.value);
     
