@@ -6,7 +6,12 @@ function adicionar(){
     if(amigos.value == ''){
         alert('digite o nome do amigo');
         return;
+   
     }
+     if(amigos.includes(amigos.value)){
+        alert('nome já adicionado!');
+        return;
+     }
     let lista = document.getElementById('lista-amigos');
     amigos.push(nome.value);
     
